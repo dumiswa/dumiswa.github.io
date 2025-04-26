@@ -15,4 +15,48 @@ body {
     padding: 2rem;
     text-align: center;
   }
+
+  /* --- HEADER STYLES --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+}
+
+.header-button {
+  background-color: #555;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.header-button:hover {
+  background-color: #777;
+}
+
+/* --- Push page content below header --- */
+body {
+  padding-top: 100px; /* Adjust this if your header is bigger */
+}
+
   
