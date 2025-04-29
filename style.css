@@ -132,8 +132,10 @@ footer {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.6rem;
   background: linear-gradient(90deg, #9fddd7, #c47885);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   margin-left: 20px; 
 }
 
