@@ -131,7 +131,7 @@ footer {
   color: #E29BA7;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.6rem;
-  background: linear-gradient(90deg, #9fddd7, #c47885);
+  background: linear-gradient(90deg, #9fddd7, #b3606e);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -177,7 +177,7 @@ footer {
 }
 
 .project-description {
-  background-color: #363232; 
+  background-color: #232323; 
   width: 580px;
   height: 200px; 
   box-sizing: border-box;
@@ -205,8 +205,92 @@ footer {
 
 
 .project-card:hover {
-  transform: translateY(-25px);
-  transform: scale(1.1);
+  transform: translateY(-45px);
+  transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+/* Skills Section */
+#skills {
+  padding: 70px 0;
+  text-align:  left;;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.skills-title {
+  font-size: 2.2rem;
+  color: #9fddd7;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.skill-badge {
+  padding: 6px 16px;
+  border: 1px solid #E29BA7;
+  border-radius: 8px;
+  color: #E29BA7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background-color: #E29BA7;
+  color: #121212;
+  cursor: default;
+}
+
+
+/* Education Section */
+.education-title {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #9fddd7;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.education-wrapper {
+  display: flex;
+  justify-content: flex-start; /* This aligns the card to the left */
+}
+
+.education-item {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 30px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+.education-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.education-item p {
+  margin: 4px 0;
+  color: #cccccc;
+  font-size: 1rem;
 }
 
