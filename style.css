@@ -148,6 +148,8 @@ footer {
   object-fit: cover;
 }
 
+
+
 /* Projects Section */
 #projects {
   padding: 50px 0;
@@ -163,6 +165,7 @@ footer {
 }
 
 .project-card {
+  cursor: pointer;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   aspect-ratio: 16 / 9;
@@ -203,11 +206,79 @@ footer {
   margin: 0; 
 }
 
-
 .project-card:hover {
   transform: translateY(-45px);
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Hidden by default */
+#project-panel.hidden {
+  display: none;
+}
+
+#project-panel {
+  position: fixed;
+  inset: 0;
+  background-color: #121212;
+  color: white;
+  z-index: 10000;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+#go-back-btn {
+  background: none;
+  border: none;
+  color: #9fddd7;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-details {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #8BC5BF;
+}
+
+.project-details p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Hidden state */
+#project-panel {
+  position: fixed;
+  inset: 0;
+  background-color: #121212;
+  color: white;
+  z-index: 10000;
+  padding: 30px;
+  box-sizing: border-box;
+
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#project-panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 
@@ -256,6 +327,7 @@ footer {
 }
 
 
+
 /* Education Section */
 .education-title {
   font-size: 2.2rem;
@@ -294,6 +366,7 @@ footer {
   font-size: 1rem;
 }
 
+/*Fade in effect*/
 #page-fade{
   position: fixed;
   inset: 0;
