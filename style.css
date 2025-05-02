@@ -294,3 +294,25 @@ footer {
   font-size: 1rem;
 }
 
+#page-fade{
+  position: fixed;
+  inset: 0;
+  background-color: #000000;
+  z-index: 9999;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.fade-out {
+  animation: fadeOut 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
