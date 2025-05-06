@@ -59,6 +59,7 @@ body {
     display: flex;
     align-items: center;
     color: #8BC5BF;
+    font-size: 1.3rem; 
   }
   
   .header-right {
@@ -212,21 +213,6 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Hidden by default */
-#project-panel.hidden {
-  display: none;
-}
-
-#project-panel {
-  position: fixed;
-  inset: 0;
-  background-color: #121212;
-  color: white;
-  z-index: 10000;
-  padding: 30px;
-  box-sizing: border-box;
-}
-
 #go-back-btn {
   background: none;
   border: none;
@@ -256,7 +242,7 @@ footer {
   color: #ccc;
 }
 
-/* Hidden state */
+/* Panel Transition */
 #project-panel {
   position: fixed;
   inset: 0;
@@ -268,17 +254,23 @@ footer {
 
   opacity: 0;
   transform: translateY(20px);
-  visibility: hidden;
   pointer-events: none;
 
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-#project-panel.visible {
+/* Show animation */
+#project-panel.panel-show {
   opacity: 1;
   transform: translateY(0);
-  visibility: visible;
   pointer-events: auto;
+}
+
+/* Hide animation */
+#project-panel.panel-hide {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 
@@ -367,17 +359,18 @@ footer {
 }
 
 /*Fade in effect*/
-#page-fade{
+#page-fade {
   position: fixed;
   inset: 0;
-  background-color: #000000;
+  background-color: #000;
   z-index: 9999;
   opacity: 1;
   pointer-events: none;
+  transition: opacity 1.5s ease-out;
 }
 
-.fade-out {
-  animation: fadeOut 1.5s ease-out forwards;
+#page-fade.fade-out {
+  opacity: 0;
 }
 
 @keyframes fadeOut {

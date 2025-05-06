@@ -28,23 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 desc.innerText = projectData[projectName].description;
             }
 
-            panel.classList.add("visible");
-            //void panel.offsetWidth;
-
-            // Show with opacity and slide-in
-            //panel.style.opacity = "1";
-            //panel.style.transform = "translateY(0)";
+            panel.classList.remove("panel-hide");
+            panel.classList.add("panel-show");
         });
     });
 
     backButton.addEventListener("click", () => {
-        //Animate out
-        //panel.style.opacity = "0";
-        //panel.style.transform = "translateY(20px)";
-        panel.classList.remove("visible");
-
-        /*setTimeout(() => {
-            panel.classList.remove("visible");
-        }, 400)*/
+        panel.classList.remove("panel-show");
+        panel.classList.add("panel-hide");
     });
 });
