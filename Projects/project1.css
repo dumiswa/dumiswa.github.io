@@ -105,3 +105,37 @@ body {
   color: white;
 }
 
+#split-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+  display: flex;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+}
+
+#split-transition.split-start {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.split-panel {
+  flex: 1;
+  background-color: #121212;
+}
+
+.fade-container {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

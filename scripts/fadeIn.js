@@ -1,11 +1,16 @@
 window.addEventListener("load", () => {
-    const fade = document.getElementById("page-fade");
-  
-    // Trigger the transition
+  const fade = document.getElementById("page-fade");
+
+  // Only fade on first visit
+  const hasVisited = sessionStorage.getItem("hasVisited");
+
+  if (!hasVisited) {
     fade.classList.add("fade-out");
-  
-    // Remove the element after the transition ends
     fade.addEventListener("transitionend", () => {
       fade.remove();
     });
-  });
+    sessionStorage.setItem("hasVisited", "true");
+  } else {
+    fade.remove(); 
+  }
+});

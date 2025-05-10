@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="project1.css" />
 </head>
 <body>
+  <div id="split-transition">
+  <div class="split-panel left"></div>
+  <div class="split-panel right"></div>
+  </div>
 
+ <div class="fade-container">
   <div class="project-wrapper">
     <button id="go-back-btn">&#8592; Go Back</button>
 
@@ -58,12 +63,21 @@
       </ul>
     </section>
   </div>
+  </div>
 
   <script>
-  document.getElementById("go-back-btn").addEventListener("click", () => {
-    window.history.back();
-  });
-  </script>
+    document.getElementById("go-back-btn").addEventListener("click", () => {
+      const transition = document.getElementById("split-transition");
+      transition.classList.add("split-start");
 
+      setTimeout(() => {
+        window.location.href = "/index.html";
+      }, 1000);
+    });
+
+    window.addEventListener("load", () => {
+      document.querySelector(".fade-container")?.classList.add("fade-in");
+    });
+  </script>
 </body>
 </html>

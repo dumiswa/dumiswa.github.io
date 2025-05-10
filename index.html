@@ -11,6 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/fadeIn.js"></script>
     <script src="scripts/projectPanel.js"></script>
+
+    <script>
+      function triggerPageTransition(url) {
+      const transition = document.getElementById("split-transition");
+      transition.classList.add("split-start");
+
+      // Optional: lock input to prevent accidental double clicks
+      document.body.style.overflow = 'hidden';
+      document.body.style.pointerEvents = 'none';
+
+      // Navigate after split animation
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500); // match your .split-start transition duration
+      }
+    </script>
+
+
   </head>
   
   <body>
@@ -18,7 +36,9 @@
     <div id="split-transition">
       <div class="split-panel left"></div>
       <div class="split-panel right"></div>
-  </div>
+    </div>
+    
+    <div class="fade-container">  
     <header> 
       <div class="container header-container">
         <div class="header-left">
@@ -139,11 +159,44 @@
     </section>
     
     
-  <footer>
-    <div class="container">
-      <p>© 2025 Andrei Dumitru</p>
-    </div>
-  </footer>
-  
+    <footer>
+      <div class="container">
+        <p>© 2025 Andrei Dumitru</p>
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const transition = document.getElementById("split-transition");
+    const fadeContainer = document.querySelector(".fade-container");
+
+    const triggerFadeIn = () => {
+      if (!fadeContainer) return;
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          fadeContainer.classList.add("fade-in");
+        }, 50); 
+      });
+    };
+
+    if (sessionStorage.getItem("fromProjectPage") === "true") {
+      // split then fade content
+      transition.classList.add("split-start");
+
+      setTimeout(() => {
+        transition.classList.remove("split-start");
+        sessionStorage.removeItem("fromProjectPage");
+        triggerFadeIn();
+      }, 100); 
+    } else {
+      triggerFadeIn();
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const project = projectData[projectName];
 
         if (project && project.url) {
-            window.location.href = project.url;
+            triggerPageTransition(project.url);
         }
         });
     });
