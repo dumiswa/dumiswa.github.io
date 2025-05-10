@@ -13,9 +13,12 @@
     <script src="scripts/projectPanel.js"></script>
   </head>
   
-
   <body>
     <div id="page-fade"></div>
+    <div id="split-transition">
+      <div class="split-panel left"></div>
+      <div class="split-panel right"></div>
+  </div>
     <header> 
       <div class="container header-container">
         <div class="header-left">
@@ -52,7 +55,7 @@
       <div class="projects-grid">
 
         <div class="project-wrapper">
-          <div class="project-card">
+          <div class="project-card" data-project-url="project1.html">
             <h3>Project 1</h3>
           </div>
           <div class="project-description">
@@ -62,7 +65,7 @@
         </div>
       
         <div class="project-wrapper">
-          <div class="project-card">
+          <div class="project-card" data-project-url="project2.html">
             <h3>Project 2</h3>
           </div>
           <div class="project-description">
@@ -72,7 +75,7 @@
         </div>
 
         <div class="project-wrapper">
-          <div class="project-card">
+          <div class="project-card" data-project-url="project3.html">
             <h3>Project 3</h3>
           </div>
           <div class="project-description">
@@ -82,7 +85,7 @@
         </div>
       
         <div class="project-wrapper">
-          <div class="project-card">
+          <div class="project-card" data-project-url="project4.html">
             <h3>Project 4</h3>
           </div>
           <div class="project-description">
@@ -141,6 +144,6 @@
       <p>© 2025 Andrei Dumitru</p>
     </div>
   </footer>
-
-  <script src="scripts/fadeIn.js"></script>
+  
 </body>
+</html>

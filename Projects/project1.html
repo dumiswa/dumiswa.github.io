@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Showcase</title>
+  <link rel="stylesheet" href="project1.css" />
+</head>
+<body>
+
+  <div class="project-wrapper">
+    <button id="go-back-btn">&#8592; Go Back</button>
+
+    <div class="project-hero">
+      <div class="video-container">
+        <!-- Placeholder video -->
+        <video autoplay muted loop playsinline>
+          <source src="your-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <h1>Project Title</h1>
+    </div>
+
+    <section class="project-section">
+      <h2>About</h2>
+      <p>Placeholder text for about the project.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Project Info</h2>
+      <ul>
+        <li><strong>Role:</strong> Gameplay Programmer</li>
+        <li><strong>Team Size:</strong> 1</li>
+        <li><strong>Duration:</strong> X weeks</li>
+        <li><strong>Engine:</strong> Unity / Unreal / SDL2</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="placeholder1.png" alt="Screenshot 1" />
+        <img src="placeholder2.png" alt="Screenshot 2" />
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Detailed Description</h2>
+      <p>Placeholder text to explain technical challenges, solutions, tools used, and personal takeaways.</p>
+    </section>
+
+    <section class="project-section">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="#">GitHub Repository</a></li>
+        <li><a href="#">itch.io Page</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+  document.getElementById("go-back-btn").addEventListener("click", () => {
+    window.history.back();
+  });
+  </script>
+
+</body>
+</html>
