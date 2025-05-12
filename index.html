@@ -16,15 +16,12 @@
       function triggerPageTransition(url) {
       const transition = document.getElementById("split-transition");
       transition.classList.add("split-start");
-
-      // Optional: lock input to prevent accidental double clicks
       document.body.style.overflow = 'hidden';
       document.body.style.pointerEvents = 'none';
 
-      // Navigate after split animation
       setTimeout(() => {
         window.location.href = url;
-      }, 500); // match your .split-start transition duration
+      }, 500); 
       }
     </script>
 
@@ -69,51 +66,82 @@
 
     <section id="projects">
       <div class="container">
-        <h2>Projects</h2> <!-- Title stays inside container -->
+        <h2>Projects</h2> 
       </div>
     
       <div class="projects-grid">
 
         <div class="project-wrapper">
           <div class="project-card" data-project-url="project1.html">
-            <h3>Project 1</h3>
+            <img src="images/IceAge.png" alt="Project 1 Thumbnail">
+            <h3 class="visually-hidden">Project 1</h3>
+
+            <div class="card-title-overlay">Project 1</div>
+
+            <div class="project-meta">
+              <div class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>1</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-clock"></i>
+                <span>6 weeks</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <span>SDL 2 (C++)</span>
+              </div>
+            </div>
           </div>
           <div class="project-description">
-            <h4>Title</h4>
-            <p>This is a short description about Project 2.</p>
+            <h4>IceAge</h4>
+            <p>A Unity-based 3D puzzle game created in close collaboration with an after-school care agency, featuring handcrafted levels, modular architecture, and gameplay systems built with C# and custom tools.</p>
           </div>
         </div>
       
         <div class="project-wrapper">
           <div class="project-card" data-project-url="project2.html">
-            <h3>Project 2</h3>
+            <img src="Images/GLSLShader.gif" alt="Project 2 Preview">
+            <h3 class="visually-hidden">Project 2</h3>
           </div>
           <div class="project-description">
-            <h4>Title</h4>
-            <p>This is a short description about Project 2.</p>
+            <h4>GLSL Shader</h4>
+            <p>A project demonstrating procedural visual effects using shader-based OpenGL and C++ uniforms showcasing time-based animation and fake lighting</p>
+          </div>
+        </div>
+
+        <div class="project-wrapper">
+          <div class="project-card" data-project-url="project4.html">
+          <img src="Images/TowerDefense.png" alt="Project 3 Preview">
+          <h3 class="visually-hidden">Project 3</h3>
+          </div>
+          <div class="project-description">
+            <h4>Tower Defense</h4>
+            <p>Unity-based tower defense game demonstrating software architecture principles including singleton patterns, event-driven UI and logic handling, modular component design, and ScriptableObject-driven configuration .</p>
           </div>
         </div>
 
         <div class="project-wrapper">
           <div class="project-card" data-project-url="project3.html">
-            <h3>Project 3</h3>
+             <img src="Images/3DRendering.png" alt="Project 4 Preview">
+             <h3 class="visually-hidden">Project 4</h3>
           </div>
           <div class="project-description">
-            <h4>Title</h4>
-            <p>This is a short description about Project 3.</p>
+            <h4>3D Rendering</h4>
+            <p>A multi-part rendering project exploring procedural generation, lighting, and terrain shaders in OpenGL.</p>
           </div>
         </div>
-      
-        <div class="project-wrapper">
-          <div class="project-card" data-project-url="project4.html">
-            <h3>Project 4</h3>
+
+          <div class="project-wrapper">
+          <div class="project-card" data-project-url="project3.html">
+             <img src="Images/TurnBasedGame.png" alt="Project 5 Preview">
           </div>
           <div class="project-description">
-            <h4>Title</h4>
-            <p>This is a short description about Project 4.</p>
+            <h4>Turn Based Game</h4>
+            <p>A turn-based combat game built with C++ and SFML, featuring multiple scenes, character classes, enemy AI, and high score tracking.</p>
           </div>
         </div>
-      
+        
       </div>     
 
       <div id="project-panel">
@@ -130,10 +158,10 @@
       <div class="skills-container">
         <h2 class="skills-title">Technical Skills</h2>
         <div class="skills-list">
-          <span class="skill-badge">C#</span>
           <span class="skill-badge">Unity</span>
+          <span class="skill-badge">C#</span>
           <span class="skill-badge">C++</span>
-          <span class="skill-badge">GLSL</span>
+          <span class="skill-badge">OpenGL</span>
           <span class="skill-badge">Java</span>
           <span class="skill-badge">HTML</span>
           <span class="skill-badge">CSS</span>
