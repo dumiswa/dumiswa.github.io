@@ -166,9 +166,8 @@ footer {
 }
 
 .project-card {
+  position: relative;
   cursor: pointer;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
   aspect-ratio: 16 / 9;
   width: 580px;
   padding: 0px;
@@ -182,7 +181,7 @@ footer {
 
 .project-meta {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: rgba(18, 18, 18, 0.85);
   color: white;
   padding: 10px 15px;
@@ -192,6 +191,12 @@ footer {
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
+  gap: 30px;
+  font-size: 1.1rem;
+}
+
+.project-card:hover .project-meta {
+  opacity: 1;
 }
 
 .meta-item {
