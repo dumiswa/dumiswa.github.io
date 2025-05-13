@@ -1,5 +1,5 @@
 .container {
-  max-width: 1200px; /* Content maximum width */
+  max-width: 1350px; /* Content maximum width */
   width: 100%;
   margin: 0 auto;
   padding: 0 30px; /* Margin left and right inside container */
@@ -10,7 +10,7 @@
 
 
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
@@ -46,7 +46,7 @@ body {
 
   .header-container {
     background-color: #121212; /* Make header background transparent */
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     padding: 0 30px;
     height: 90px;
@@ -330,7 +330,7 @@ footer {
 }
 
 .skills-container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 0 30px;
 }
