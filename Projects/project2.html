@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IceAge - Project Showcase</title>
+  <link rel="stylesheet" href="project1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="split-transition">
+    <div class="split-panel left"></div>
+    <div class="split-panel right"></div>
+  </div>
+
+  <div class="fade-container">
+    <div class="project-wrapper">
+      <button id="go-back-btn">← Go Back</button>
+
+      <div class="project-hero">
+        <div class="video-container">
+          <video autoplay muted loop playsinline>
+            <source src="../Images/GLSLShader.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <h1>IceAge</h1>
+      </div>
+
+      <div class="info-section-wrapper">
+      <section class="info-card">
+        <h3>About</h3>
+        <p>
+          I made this small OpenGL demo to practice fragment and vertex shaders from scratch. I wanted to create a visual effect without any textures, just math, so I ended up building a 
+          full-screen procedural checkerboard pattern using GLSL. It is a clean little project where the entire output is generated directly by the GPU.
+        </p>
+      </section>
+
+      <section class="info-card">
+        <h3>Project Info</h3>
+        <ul>
+          <li><i class="fas fa-user"></i><strong>Role:</strong> Engineer</li>
+          <li><i class="fas fa-users"></i><strong>Team Size:</strong> 1</li>
+          <li><i class="fas fa-clock"></i><strong>Duration:</strong> 3 weeks</li>
+          <li><i class="fas fa-screwdriver-wrench"></i><strong>Engine:</strong> C++, OpenGL, GLSL</li>
+        </ul>
+      </section>
+    </div>
+
+      <section class="project-section">
+      <h2>
+        <a href="https://github.com/dumiswa/GLSLShader" target="_blank" style="text-decoration: none; color: inherit;">
+            Rendering Pipeline
+          <i class="fas fa-up-right-from-square"></i>
+        </a>
+      </h2>
+      <p>
+            I kept the setup simple, just a single fullscreen triangle rendered with no transformations. I used OpenGL with a C++ wrapper to initialize everything, then passed it
+            over to the shader. Most of the heavy lifting was done in the fragment stage. I did not want to deal with VAOs or complex meshes, so I kept the focus on writing clean, minimal GLSL.
+      </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+        <a href="https://github.com/dumiswa/GLSLShader" target="_blank" style="text-decoration: none; color: inherit;"> 
+            Vertex Shader
+          <i class="fas fa-up-right-from-square"></i>
+        </a>
+      </h2>
+        <p>
+            In the vertex shader, I just passed through static positions for a big fullscreen triangle. There was no need for any transformations or lighting — the only goal here was to get something 
+            on screen so I could play with the fragment stage. It is as bare-bones as it gets, but it does exactly what I needed it to do.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+        <a href="https://github.com/dumiswa/GLSLShader" target="_blank" style="text-decoration: none; color: inherit;">
+            Fragment Shader
+          <i class="fas fa-up-right-from-square"></i>
+        </a>
+      </h2>
+        <p>
+          This is where everything happens. I wrote a checkerboard pattern directly in the fragment shader using `mod` and `floor` operations on the UV coordinates. The cool part is that it's
+          resolution-independent and does not use any textures at all. I also made sure it scales nicely with window size and aspect ratio, so it feels consistent no matter how you resize 
+          the window.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+        <a href="https://github.com/dumiswa/GLSLShader" target="_blank" style="text-decoration: none; color: inherit;">
+             Checkerboard Logic
+          <i class="fas fa-up-right-from-square"></i>
+        </a>
+      </h2>
+        <p>
+            The pattern logic is pretty straightforward but surprisingly fun to implement. I take the screen coordinates, scale them into a grid, and alternate black and white squares using a simple XOR trick 
+            on the grid indices. It is satisfying how a couple of lines of math can produce a crisp and clean effect that fills the screen. This type of approach is perfect for
+            procedural graphics or tools that need lightweight patterns on the fly.
+        </p>
+      </section>
+
+
+      <section class="project-section">
+        <h1>What I Learned</h1>
+        <p>
+            I learned a lot about how shaders are structured in OpenGL — especially how fragment shaders can do way more than I initially thought. I also got more comfortable writing raw 
+            GLSL, and honestly, just seeing an image come to life from pure math felt super rewarding. I definitely want to explore more visual experiments like this in the future, maybe even 
+            play with noise functions or dynamic input.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="https://github.com/dumiswa/GLSLShader">GitHub Repository</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("go-back-btn").addEventListener("click", () => {
+      const transition = document.getElementById("split-transition");
+      transition.classList.add("split-start");
+
+      setTimeout(() => {
+        sessionStorage.setItem("fromProjectPage", "true");
+        window.location.href = "/index.html";
+      }, 1000);
+    });
+
+    window.addEventListener("load", () => {
+      document.querySelector(".fade-container")?.classList.add("fade-in");
+    });
+  </script>
+</body>
+</html>

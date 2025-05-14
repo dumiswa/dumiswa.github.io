@@ -21,8 +21,7 @@
       <div class="project-hero">
         <div class="video-container">
           <video autoplay muted loop playsinline>
-            <source src="your-video.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
+            <source src="../Images/IceAge/IceAgeSpeedRun.mp4" type="video/mp4"/>
           </video>
         </div>
         <h1>IceAge</h1>
@@ -32,29 +31,19 @@
       <section class="info-card">
         <h3>About</h3>
         <p>
-          IceAge is a short puzzle-adventure game developed in a team of 7 for a university project in collaboration with an after-school care company. The game was inspired by stories and characters imagined by children while trying to create a similar experience to <strong>Captain Toad</strong>. Players traverse icy levels, collect crystals, and interact with environmental systems, all within a robust custom Unity framework.
+          IceAge is a short puzzle-adventure game developed in a team of 7 for a university project in collaboration with an after-school care company. The game was inspired by stories and 
+          characters imagined by children while trying to create a similar experience to <strong>Captain Toad</strong>. Players traverse icy levels, collect crystals, and interact with 
+          environmental systems, all within a robust custom Unity framework.
         </p>
       </section>
 
       <section class="info-card">
         <h3>Project Info</h3>
         <ul>
-          <li>
-            <i class="fas fa-user"></i>
-            <strong>Role:</strong> Engineer
-          </li>
-          <li>
-            <i class="fas fa-users"></i>
-            <strong>Team Size:</strong> 7
-          </li>
-          <li>
-            <i class="fas fa-clock"></i>
-            <strong>Duration:</strong> 8 weeks
-          </li>
-          <li>
-            <i class="fas fa-screwdriver-wrench"></i>
-            <strong>Engine:</strong> Unity
-          </li>
+          <li><i class="fas fa-user"></i><strong>Role:</strong> Engineer</li>
+          <li><i class="fas fa-users"></i><strong>Team Size:</strong> 7</li>
+          <li><i class="fas fa-clock"></i><strong>Duration:</strong> 8 weeks</li>
+          <li><i class="fas fa-screwdriver-wrench"></i><strong>Engine:</strong> Unity</li>
         </ul>
       </section>
     </div>
@@ -62,69 +51,85 @@
       <section class="project-section">
         <h1>Description</h1>
         <p>
-          The game’s foundation was built around a centralized but highly decoupled architecture. Each gameplay system could be independently toggled, initialized, and maintained. This approach helped with debugging, testing individual components, and scaling up development as complexity increased. It also ensured cleaner separation of concerns across the team.
+          The game’s foundation was built around a centralized but highly decoupled architecture. Each gameplay system could be independently toggled, initialized, and maintained. This 
+          approach helped with debugging, testing individual components, and scaling up development as complexity increased. It also ensured cleaner separation of concerns across the team.
         </p>
       </section>
 
       <section class="project-section">
       <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Monoliths/Core" target="_blank" style="text-decoration: none; color: inherit;">Monolith-Based Interaction Model  
+        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Monoliths/Core" target="_blank" style="text-decoration: none; color: inherit;">
+          Monolith-Based Interaction Model  
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
       <p>
-        At the heart of IceAge’s environmental interaction is a monolith system — a modular design that acts as a bridge between in-world triggers and abstract game logic. Each element in the world that can trigger behavior (like pressure plates, switches, or interactables) is treated as a self-contained logic block that communicates with the central game state. These monoliths could register themselves at runtime and receive signals, allowing designers to build complex interactions without tightly coupling gameplay code. The flexibility of this system proved critical in building puzzles and level events quickly and cleanly.
+        At the heart of IceAge’s environmental interaction is a monolith system — a modular design that acts as a bridge between in-world triggers and abstract game logic. Each element 
+        in the world that can trigger behavior (like pressure plates, switches, or interactables) is treated as a self-contained logic block that communicates with the central game state. 
+        These monoliths could register themselves at runtime and receive signals, allowing designers to build complex interactions without tightly coupling gameplay code. The flexibility 
+        of this system proved critical in building puzzles and level events quickly and cleanly.
       </p>
       </section>
 
       <section class="project-section">
         <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/StateMachines" target="_blank" style="text-decoration: none; color: inherit;"> State-Driven Systems
+        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/StateMachines" target="_blank" style="text-decoration: none; color: inherit;">
+           State-Driven Systems
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
         <p>
-          The gameplay loop, enemy logic, player behavior, and UI interactions were driven entirely by state machines. Each domain managed its own transitions and logic flow, making systems easier to extend and reason about. Cutscenes, menus, and level progressions were all handled through state transitions that made control over flow and logic explicit.
+          The gameplay loop, enemy logic, player behavior, and UI interactions were driven entirely by state machines. Each domain managed its own transitions and logic flow, making 
+          systems easier to extend and reason about. Cutscenes, menus, and level progressions were all handled through state transitions that made control over flow and logic explicit.
         </p>
       </section>
 
       <section class="project-section">
         <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Serialization" target="_blank" style="text-decoration: none; color: inherit;"> Save and Progression
+        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Serialization" target="_blank" style="text-decoration: none; color: inherit;"> 
+          Save and Progression
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
         <p>
-          Game state, player progression, and level completion were persisted using a custom-built serialization system. This setup allowed automatic syncing between runtime data and disk state while keeping the save logic abstract and reusable. This also supported multiple entry points into the game world and persisted collectibles and progress across sessions.
+          Game state, player progression, and level completion were persisted using a custom-built serialization system. This setup allowed automatic syncing between runtime data and disk 
+          state while keeping the save logic abstract and reusable. This also supported multiple entry points into the game world and persisted collectibles and progress across sessions.
         </p>
       </section>
 
       <section class="project-section">
         <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Editor" target="_blank" style="text-decoration: none; color: inherit;"> Custom Tooling
+        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Editor" target="_blank" style="text-decoration: none; color: inherit;"> 
+          Custom Tooling
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
         <p>
-          To improve iteration speed and streamline level design, I built several editor extensions. These tools allowed non-programmers to configure enemy patrol routes, visualize gameplay triggers in the scene, and manage debug visual volumes. The tools were integrated directly into the Unity Editor, significantly increasing team productivity.
+          To improve iteration speed and streamline level design, I built several editor extensions. These tools allowed non-programmers to configure enemy patrol routes, visualize gameplay
+           triggers in the scene, and manage debug visual volumes. The tools were integrated directly into the Unity Editor, significantly increasing team productivity.
         </p>
       </section>
 
        <section class="project-section">
         <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Visualisators" target="_blank" style="text-decoration: none; color: inherit;"> UI and Player Feedback
+        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Visualisators" target="_blank" style="text-decoration: none; color: inherit;"> 
+          UI and Player Feedback
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
         <p>
-          In-game feedback was handled via a modular popup system that queued visual messages for the player. This system supported stacked tutorials, tips, and event-driven alerts — all decoupled from the game logic. It improved onboarding and helped guide the player through the different puzzle mechanics without breaking immersion.
+          In-game feedback was handled via a modular popup system that queued visual messages for the player. This system supported stacked tutorials, tips, and event-driven alerts,
+           all decoupled from the game logic. It improved onboarding and helped guide the player through the different puzzle mechanics without breaking immersion.
         </p>
       </section>
 
       <section class="project-section">
         <h1>What I Learned</h1>
         <p>
-          Working on IceAge gave me a deeper appreciation for systems thinking and modular design. I learned how important it is to design with flexibility in mind, especially in a collaborative team environment where different people need to plug into the same framework. I also gained experience building practical Unity tooling that sped up iteration, and I improved my ability to balance clean architecture with fast prototyping under tight deadlines. Above all, it taught me how to structure game logic in a way that is easy to scale, debug, and communicate to others.
+          Working on IceAge gave me a deeper appreciation for systems thinking and modular design. I learned how important it is to design with flexibility in mind, especially 
+          in a collaborative team environment where different people need to plug into the same framework. I also gained experience building practical Unity tooling that sped up 
+          iteration, and I improved my ability to balance clean architecture with fast prototyping under tight deadlines. Above all, it taught me how to structure game logic in a
+           way that is easy to scale, debug, and communicate to others.
         </p>
       </section>
 
