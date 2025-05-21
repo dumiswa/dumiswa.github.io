@@ -31,7 +31,7 @@
         <section class="info-card">
           <h3>About</h3>
           <p>
-            This tower defense game was a solo university project created during my Software Architecture course. I wanted to
+            This tower defense game was a solo university project I created during my Software Architecture course. I wanted to
             go beyond a simple gameplay prototype and really focus on building something architecturally sound. Players place,
             upgrade, and destroy towers in order to defend against increasingly challenging waves of enemies. Everything from
             tower interaction to UI and spawning was designed to be modular and event-driven.
@@ -67,7 +67,9 @@
           </a>
         </h2>
         <p>
-          I decided early on to build a centralized event handler for UI interactions. The <code>UIEventHandler</code> script exposes events for everything — tile clicks, tower approval, weapon selection, etc. By using C# actions and delegates, I avoided tight coupling between systems and gave myself flexibility to expand the UI later without refactoring everything.
+          I decided early on to build a centralized event handler for UI interactions. The <strong>UIEventHandler</strong> script exposes events for everything — tile clicks,
+           tower approval, weapon selection, etc. By using C# actions and delegates, I avoided tight coupling between systems and gave myself flexibility to expand the UI 
+           later without refactoring everything.
         </p>
       </section>
 
@@ -79,7 +81,9 @@
           </a>
         </h2>
         <p>
-          For the wave system, I used coroutines to control timed enemy spawning. Each wave gets more difficult, and I track the number of enemies spawned and destroyed to determine when a wave ends. I also built in win/lose condition checks based on how many enemies make it through — it was a fun challenge balancing the game logic with real-time feedback.
+          For the wave system, I used coroutines to control timed enemy spawning. Each wave gets more difficult, and I track the number of enemies spawned and destroyed to 
+          determine when a wave ends. I also built in win/lose condition checks based on how many enemies make it through — it was a fun challenge balancing the game logic 
+          with real-time feedback.
         </p>
       </section>
 
@@ -91,7 +95,8 @@
           </a>
         </h2>
         <p>
-          I used ScriptableObjects to define different tower types and their stats. This way, adding a new tower type only required filling in some fields — no extra code needed. I also created upgrade logic that updates both visuals and functionality in the game. The system supports full upgrades, stat previews, and tower destruction via UI.
+          I used ScriptableObjects to define different tower types and their stats. This way, adding a new tower type only required filling in some fields — no extra code 
+          needed. I also created upgrade logic that updates both visuals and functionality in the game. The system supports full upgrades, stat previews, and tower destruction via UI.
         </p>
       </section>
 
@@ -103,7 +108,9 @@
           </a>
         </h2>
         <p>
-          The <code>GameManager</code> is the central place where I control game-wide variables like money, time scale, and victory/defeat states. I wanted to make sure everything global had a single source of truth, and this class also interacts with UI updates and reset functionality. I also added a speed toggle for testing purposes — which ended up being surprisingly useful!
+          The <strong>GameManager</strong> is the central place where I control game-wide variables like money, time scale, and victory/defeat states. I wanted to make sure 
+          everything global had a single source of truth, and this class also interacts with UI updates and reset functionality. I also added a speed toggle for testing 
+          purposes — which ended up being surprisingly useful!
         </p>
       </section>
 
@@ -115,14 +122,17 @@
           </a>
         </h2>
         <p>
-          One of the things I enjoyed most was building the selection system. I used raycasts to detect which tile or tower the player clicked on, and I highlighted tiles visually. I also made sure the selection and interaction logic was reusable and handled edge cases like clicking on already-placed towers or selecting tiles mid-shop interaction.
+          One of the things I enjoyed most was building the selection system. I used raycasts to detect which tile or tower the player clicked on, and I highlighted tiles 
+          visually. I also made sure the selection and interaction logic was reusable and handled edge cases like clicking on already-placed towers or selecting tiles mid-shop interaction.
         </p>
       </section>
 
       <section class="project-section">
         <h1>What I Learned</h1>
         <p>
-          This project really helped me think more critically about architecture in Unity. I learned how to design systems that talk to each other cleanly using events, and how to avoid writing spaghetti code by breaking things into focused managers. I also became more confident in using ScriptableObjects to separate data from logic. Overall, this was one of the most rewarding solo projects I’ve built so far.
+          This project really helped me think more critically about architecture in Unity. I learned how to design systems that talk to each other cleanly using events,
+           and how to avoid writing spaghetti code by breaking things into focused managers. I also became more confident in using ScriptableObjects to separate data from 
+           logic. Overall, this was one of the most rewarding solo projects I’ve built so far.
         </p>
       </section>
 

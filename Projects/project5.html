@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turn Based Game</title>
+  <link rel="stylesheet" href="project1.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="split-transition">
+    <div class="split-panel left"></div>
+    <div class="split-panel right"></div>
+  </div>
+
+  <div class="fade-container">
+    <div class="project-wrapper">
+      <button id="go-back-btn">← Go Back</button>
+
+      <!--<div class="project-hero">
+        <div class="video-container">
+          <img src="../Images/Rendering/terrain.gif" alt="Rendering Preview">
+        </div>
+        <h1>3D Rendering Projects</h1>
+      </div>-->
+
+      <div class="info-section-wrapper">
+        <section class="info-card">
+          <h3>About</h3>
+          <p>
+            This is a simple turn-based combat game that I developed using C++ and SFML as part of a university programming assignment. Players can choose between character classes 
+            and battle a procedurally controlled enemy through attack, heal, or do-nothing actions. High scores are tracked and stored between sessions, and the game features
+            a robust scene management system.
+          </p>
+        </section>
+
+        <section class="info-card">
+          <h3>Project Info</h3>
+          <ul>
+            <li><i class="fas fa-user"></i><strong> Role:</strong> Engineer</li>
+            <li><i class="fas fa-users"></i><strong> Team Size:</strong> 1</li>
+            <li><i class="fas fa-clock"></i><strong> Duration:</strong> 4 weeks</li>
+            <li><i class="fas fa-screwdriver-wrench"></i><strong> Framework:</strong> C++ with SFML</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="project-section">
+        <h1>Description</h1>
+        <p>
+          I structured the game around a modular scene system (main menu, character selection, fight, and game over scenes). Players can interact using mouse-based UI buttons 
+          for in-game actions. Each game object, such as buttons or text, inherits from a base <strong>GameObject</strong> class and is managed through custom scene logic.
+        </p>
+      </section>
+
+      <section class="project-section">
+      <h2>
+        <a href="https://github.com/dumiswa/Cpp" target="_blank" style="text-decoration: none; color: inherit;">
+        SceneHandler and Turn System
+        <i class="fas fa-up-right-from-square"></i>
+        </a>
+      </h2>
+      <p>
+        The <strong>SceneHandler</strong> controls scene transitions and handles player/enemy turns using a <strong>TurnState</strong> enum. The enemy acts via a probabilistic
+         decision tree (attack, heal, do nothing) and waits 1.5 seconds before its turn executes. Player death or exiting to menu triggers high score storage.
+      </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+          <a href="https://github.com/dumiswa/Cpp" target="_blank" style="text-decoration: none; color: inherit;">
+          Combat and Characters
+          <i class="fas fa-up-right-from-square"></i>
+          </a>
+        </h2>
+        <p>
+          I added three character classes (Tank, Assassin, Mage) which influence player stats like health, attack, and heal values. Players interact with the enemy through actions. 
+          Enemy AI resets upon defeat, and player performance is recorded through a dynamic score counter.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+          <a href="https://github.com/dumiswa/Cpp" target="_blank" style="text-decoration: none; color: inherit;">
+          High Score Management</h2>
+          <i class="fas fa-up-right-from-square"></i>
+          </a>
+        <p>
+          The game includes a <strong>HighscoreManager</strong> that saves scores to disk using file I/O. High scores are updated after death or when quitting mid-game 
+          (if the score exceeds 1). Scores are displayed on the main menu via a dynamic <strong>TextObject</strong>.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>
+          <a href="https://github.com/dumiswa/Cpp" target="_blank" style="text-decoration: none; color: inherit;">
+          Game Flow & UI Feedback
+          <i class="fas fa-up-right-from-square"></i>
+          </a>
+        </h2>
+        <p>
+          Text objects display feedback during combat and update in real-time to show health, actions, and scores. A delay system ensures the game feels turn-based, with visual 
+          cues between turns. The UI is constructed entirely with SFML components.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h1>What I Learned</h1>
+        <p>
+          Through this project, I learned more about core C++ principles such as object-oriented design, file I/O, inheritance, and memory management. I gained experience working with 
+          event-driven systems, pointers vs. references, and practical use of SFML for 2D UI and rendering. 
+        </p>
+      </section>
+      <section class="project-section">
+        <h1>Gallery</h1>
+        <div class="gallery">
+          <img src="../Images/TurnBasedGame/TBGMainMenu.png" alt="Main menu" />
+          <img src="../Images/TurnBasedGame.png" alt="Fight Scene" />
+          <img src="../Images/TurnBasedGame/TBGLoseScreen.png" alt="Lose screen" />
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="https://github.com/dumiswa/Cpp" target="_blank">GitHub Repository</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("go-back-btn").addEventListener("click", () => {
+      const transition = document.getElementById("split-transition");
+      transition.classList.add("split-start");
+
+      setTimeout(() => {
+        sessionStorage.setItem("fromProjectPage", "true");
+        window.location.href = "/index.html";
+      }, 1000);
+    });
+
+    window.addEventListener("load", () => {
+      document.querySelector(".fade-container")?.classList.add("fade-in");
+    });
+  </script>
+</body>
+</html>

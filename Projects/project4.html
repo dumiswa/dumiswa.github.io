@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IceAge - Project Showcase</title>
+  <title>3D Rendering</title>
   <link rel="stylesheet" href="project1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,134 +18,83 @@
     <div class="project-wrapper">
       <button id="go-back-btn">← Go Back</button>
 
-      <div class="project-hero">
+      <!--<div class="project-hero">
         <div class="video-container">
-          <video autoplay muted loop playsinline>
-            <source src="../Images/IceAge/IceAgeSpeedRun.mp4" type="video/mp4"/>
-          </video>
+          <img src="../Images/Rendering/terrain.gif" alt="Rendering Preview">
         </div>
-        <h1>IceAge</h1>
-      </div>
+        <h1>3D Rendering Projects</h1>
+      </div>-->
 
       <div class="info-section-wrapper">
-      <section class="info-card">
-        <h3>About</h3>
-        <p>
-          IceAge is a short puzzle-adventure game developed in a team of 7 for a university project in collaboration with an after-school care company. The game was inspired by stories and 
-          characters imagined by children while trying to create a similar experience to <strong>Captain Toad</strong>. Players traverse icy levels, collect crystals, and interact with 
-          environmental systems, all within a robust custom Unity framework.
-        </p>
-      </section>
+        <section class="info-card">
+          <h3>About</h3>
+          <p>
+            This project contains three university assignments from my <em>3D Rendering</em> course. I built it using C++ and modern OpenGL within the MGE (Micro Game Engine) framework. Each
+             assignment explores advanced rendering concepts such as the Phong lighting model and terrain rendering using heightmaps and splat maps.
+          </p>
+        </section>
 
-      <section class="info-card">
-        <h3>Project Info</h3>
-        <ul>
-          <li><i class="fas fa-user"></i><strong>Role:</strong> Engineer</li>
-          <li><i class="fas fa-users"></i><strong>Team Size:</strong> 7</li>
-          <li><i class="fas fa-clock"></i><strong>Duration:</strong> 8 weeks</li>
-          <li><i class="fas fa-screwdriver-wrench"></i><strong>Engine:</strong> Unity</li>
-        </ul>
-      </section>
-    </div>
-
-      <section class="project-section">
-        <h1>Description</h1>
-        <p>
-          The game’s foundation was built around a centralized but highly decoupled architecture. Each gameplay system could be independently toggled, initialized, and maintained. This 
-          approach helped with debugging, testing individual components, and scaling up development as complexity increased. It also ensured cleaner separation of concerns across the team.
-        </p>
-      </section>
+        <section class="info-card">
+          <h3>Project Info</h3>
+          <ul>
+            <li><i class="fas fa-user"></i><strong> Role:</strong> Engineer</li>
+            <li><i class="fas fa-users"></i><strong> Team Size:</strong> 1</li>
+            <li><i class="fas fa-clock"></i><strong> Duration:</strong> 4 weeks</li>
+            <li><i class="fas fa-screwdriver-wrench"></i><strong> Framework:</strong> C++ with OpenGL (MGE)</li>
+          </ul>
+        </section>
+      </div>
 
       <section class="project-section">
       <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Monoliths/Core" target="_blank" style="text-decoration: none; color: inherit;">
-          Monolith-Based Interaction Model  
+        <a href="https://github.com/dumiswa/3D-RenderingGLSL/tree/main/mge/shaders" target="_blank" style="text-decoration: none; color: inherit;">
+          ADS Lighting Model
           <i class="fas fa-up-right-from-square"></i>
         </a>
       </h2>
-      <p>
-        At the heart of IceAge’s environmental interaction is a monolith system — a modular design that acts as a bridge between in-world triggers and abstract game logic. Each element 
-        in the world that can trigger behavior (like pressure plates, switches, or interactables) is treated as a self-contained logic block that communicates with the central game state. 
-        These monoliths could register themselves at runtime and receive signals, allowing designers to build complex interactions without tightly coupling gameplay code. The flexibility 
-        of this system proved critical in building puzzles and level events quickly and cleanly.
-      </p>
+        <p>
+          This assignment implements the Ambient, Diffuse, and Specular components alongside with attenuation of the Phong lighting model. Directional and point lights are supported, and multiple material types 
+          like <strong>ColorMaterial</strong>, <strong>TextureMaterial</strong>, and <strong>LightMaterial</strong> are introduced. Per-fragment lighting is calculated in the shader, 
+          with adjustable light properties and specular strength.
+        </p>
       </section>
+
+        <section class="project-section">
+          <h2>
+            <a href="https://github.com/dumiswa/3D-RenderingGLSL/tree/main/mge/shaders" target="_blank" style="text-decoration: none; color: inherit;">
+              Terrain Rendering
+              <i class="fas fa-up-right-from-square"></i>
+            </a>
+          </h2>
+          <p>
+            This project loads and renders a high-resolution terrain (8196x8196) using a grayscale heightmap. The vertex shader performs displacement, and a splat map blends multiple
+            textures in the fragment shader. Terrain resolution and texture scaling are configurable, and lighting from Assignment 3 is reused for realism.
+          </p>
+        </section>
 
       <section class="project-section">
-        <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/StateMachines" target="_blank" style="text-decoration: none; color: inherit;">
-           State-Driven Systems
-          <i class="fas fa-up-right-from-square"></i>
-        </a>
-      </h2>
-        <p>
-          The gameplay loop, enemy logic, player behavior, and UI interactions were driven entirely by state machines. Each domain managed its own transitions and logic flow, making 
-          systems easier to extend and reason about. Cutscenes, menus, and level progressions were all handled through state transitions that made control over flow and logic explicit.
-        </p>
-      </section>
-
-      <section class="project-section">
-        <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Serialization" target="_blank" style="text-decoration: none; color: inherit;"> 
-          Save and Progression
-          <i class="fas fa-up-right-from-square"></i>
-        </a>
-      </h2>
-        <p>
-          Game state, player progression, and level completion were persisted using a custom-built serialization system. This setup allowed automatic syncing between runtime data and disk 
-          state while keeping the save logic abstract and reusable. This also supported multiple entry points into the game world and persisted collectibles and progress across sessions.
-        </p>
-      </section>
-
-      <section class="project-section">
-        <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Editor" target="_blank" style="text-decoration: none; color: inherit;"> 
-          Custom Tooling
-          <i class="fas fa-up-right-from-square"></i>
-        </a>
-      </h2>
-        <p>
-          To improve iteration speed and streamline level design, I built several editor extensions. These tools allowed non-programmers to configure enemy patrol routes, visualize gameplay
-           triggers in the scene, and manage debug visual volumes. The tools were integrated directly into the Unity Editor, significantly increasing team productivity.
-        </p>
-      </section>
-
-       <section class="project-section">
-        <h2>
-        <a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024/tree/main/Assets/Scripts/Visualisators" target="_blank" style="text-decoration: none; color: inherit;"> 
-          UI and Player Feedback
-          <i class="fas fa-up-right-from-square"></i>
-        </a>
-      </h2>
-        <p>
-          In-game feedback was handled via a modular popup system that queued visual messages for the player. This system supported stacked tutorials, tips, and event-driven alerts,
-           all decoupled from the game logic. It improved onboarding and helped guide the player through the different puzzle mechanics without breaking immersion.
-        </p>
-      </section>
-
-      <section class="project-section">
-        <h1>What I Learned</h1>
-        <p>
-          Working on IceAge gave me a deeper appreciation for systems thinking and modular design. I learned how important it is to design with flexibility in mind, especially 
-          in a collaborative team environment where different people need to plug into the same framework. I also gained experience building practical Unity tooling that sped up 
-          iteration, and I improved my ability to balance clean architecture with fast prototyping under tight deadlines. Above all, it taught me how to structure game logic in a
-           way that is easy to scale, debug, and communicate to others.
-        </p>
+        <h1>Highlights</h1>
+        <ul>
+          <li>Phong ADS lighting model with multiple materials</li>
+          <li>Real-time terrain deformation using vertex shaders</li>
+          <li>Splat map texture blending</li>
+          <li>Per-fragment lighting with adjustable parameters</li>
+          <li>Modular shader utility system</li>
+        </ul>
       </section>
 
       <section class="project-section">
         <h1>Gallery</h1>
         <div class="gallery">
-          <img src="../Images/IceAge/iceagelvl1.png" alt="Screenshot 1" />
-          <img src="../Images/IceAge/iceagelvl2.png" alt="Screenshot 2" />
-          <img src="../Images/IceAge/iceagelvl3.png" alt="Screenshot 3" />
+          <img src="../Images/3DRendering/3d1.png" alt="Lighting Screenshot" />
+          <img src="../Images/3DRendering/3d2.png" alt="Terrain Screenshot" />
         </div>
       </section>
 
       <section class="project-section">
         <h1>Links</h1>
         <ul>
-          <li><a href="https://github.com/dumiswa/Saxion-CMGT-Project-Show-Off-2024">GitHub Repository</a></li>
+          <li><a href="https://github.com/dumiswa/3D-RenderingGLSL" target="_blank">GitHub Repository</a></li>
         </ul>
       </section>
     </div>

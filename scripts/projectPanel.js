@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "Project 1": { title: "Project 1", url: "Projects/project1.html" },
     "Project 2": { title: "Project 2", url: "Projects/project2.html" },
     "Project 3": { title: "Project 3", url: "Projects/project3.html" },
-    "Project 4": { title: "Project 4", url: "Projects/project4.html" }
+    "Project 4": { title: "Project 4", url: "Projects/project4.html" },
+    "Project 5": { title: "Project 5", url: "Projects/project5.html" },
+    "Project 6": { title: "Project 6", url: "Projects/project6.html" }
     };
 
     cards.forEach(card => {
