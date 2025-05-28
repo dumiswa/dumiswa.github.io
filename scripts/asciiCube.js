@@ -4,7 +4,7 @@ const width = 160, height = 44;
 const backgroundChar = ' ';
 const distanceFromCam = 100;
 const K1 = 40;
-const incrementSpeed = 0.15;
+const incrementSpeed = 0.13;
 
 const buffer = new Array(width * height);
 const zBuffer = new Array(width * height);
