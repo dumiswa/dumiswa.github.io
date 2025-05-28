@@ -13,11 +13,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #0e0d0d;
   }
   
   header, footer {
-    background-color: #121212;
+    background-color: #0e0d0d;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -45,7 +45,7 @@ body {
   
 
   .header-container {
-    background-color: #121212; /* Make header background transparent */
+    background-color: #0e0d0d; /* Make header background transparent */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
@@ -94,7 +94,7 @@ body {
 /* --- Push page content below header --- */
 body {
   padding-top: 100px; /* because header is fixed */
-  background-color: #121212;
+  background-color: #0e0d0d;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -106,7 +106,7 @@ section {
 }
 
 footer {
-  background-color: #121212;
+  background-color: #0e0d0d;
   color: white;
   text-align: center;
   padding: 2rem 0;
@@ -294,7 +294,7 @@ footer {
 #project-panel {
   position: fixed;
   inset: 0;
-  background-color: #121212;
+  background-color: #0e0d0d;
   color: white;
   z-index: 10000;
   padding: 30px;
@@ -362,7 +362,7 @@ footer {
 
 .skill-badge:hover {
   background-color: #E29BA7;
-  color: #121212;
+  color: #0e0d0d;
   cursor: default;
 }
 
@@ -453,7 +453,7 @@ footer {
 
 .split-panel {
   flex: 1;
-  background-color: #121212;
+  background-color: #0e0d0d;
 }
 
 .fade-container {
@@ -473,8 +473,8 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px; 
-  line-height: 24px; 
+  font-size: 23px; 
+  line-height: 23px; 
   white-space: pre;
   color: transparent; /* Make text transparent to show bg */
   background: linear-gradient(90deg, #9fddd7, #b3606e);
