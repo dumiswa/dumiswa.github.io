@@ -229,7 +229,7 @@ footer {
 }
 
 .project-description {
-  background-color: #232323; 
+  background-color: #202020;
   width: 580px;
   height: 200px; 
   box-sizing: border-box;
@@ -486,4 +486,45 @@ footer {
   font-family: monospace;
   text-align: center;
   user-select: none; /* optional: prevent text selection */
+}
+
+
+@media (max-width: 768px) {
+  .container,
+  .header-container,
+  .skills-container {
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .about-text {
+    margin-left: 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card,
+  .project-description,
+  .info-card {
+    width: 50%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
 }
